@@ -4,6 +4,6 @@
   <h3><%= s.category_name %></h3>
       <% @subbies = Category.where(category_name: s.category_name) %>
       <% @subbies.each do |ss| %>
-        <%= link_to ss.sub_category, item_path(ss.id) %><br>
+        <%= link_to ss.sub_category, category_path(ss.id) %><br>
       <% end %>
   <% end %>
