@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: [:edit, :update, :show, :destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.select(:category_name).distinct
   end
 
   def new
