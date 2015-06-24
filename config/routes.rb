@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get ':category' => 'pages#show'
 
+  get '/subcategories' => 'categories#sub_category'
+
 end

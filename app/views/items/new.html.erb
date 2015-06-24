@@ -1,9 +1,10 @@
 <%= form_for @item do |f| %>
 <%= f.label('Category: ') %>
-<%= f.select(:category_id, Category.distinct.all.collect {|p| [ p.category, p.id ] }, {prompt: 'Select Category'}) %>
+<% @categories = Category.select(:category).distinct %>
+<%= f.select(:category_id, @categories.all.collect {|p| [ p.category, p.id ]},{prompt: 'Select Category'}, {class: 'main_cat'}) %>
 <br>
-<%= f.label('Subategory') %>
-<%= f.select(:category_id, Category.all.collect {|p| [ p.sub_category, p.id ] }, {prompt: 'Select Subcategory'}) %>
+<%= f.label('Subcategory') %>
+<%= f.select(:category_id, Category.all.collect {|p| [ p.sub_category, p.id ] }, {prompt: 'Select Subcategory'}, {class: 'sub_cat'}) %>
 <br>
 <%= f.label('Item Name') %>
 <%= f.text_field :item_name %>
