@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  
+
   before_action :find_category, only: [:edit, :update, :show, :destroy]
 
   def index
@@ -43,6 +43,15 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def sub_category
+    #@subcategories = Category.where(category: params[:selectedCategory]).map do |c|
+    #  c.sub_category unless c.sub_category.nil?
+    #end
+    @subcategories = Category.where(category: params[:selectedCategory])
+    render(json: @subcategories)
+  end
+
+
   private
 
     def category_params
@@ -54,5 +63,3 @@ class CategoriesController < ApplicationController
     end
 
 end
-
-

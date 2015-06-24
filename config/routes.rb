@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :items
   resources :categories
 
+  get '/subcategories' => 'categories#sub_category'
+
 
 end
