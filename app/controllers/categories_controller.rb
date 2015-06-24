@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @categories = Category.where(category: @category.category)
   end
 
   def create
@@ -49,7 +50,7 @@ class CategoriesController < ApplicationController
     end
 
     def find_category
-      @category = Catergory.find(params[:id])
+      @category = Category.find(params[:id])
     end
 
 end

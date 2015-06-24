@@ -1,2 +1,5 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1>Categories</h1>
+
+<% @categories.each do |sub| %>
+  <%= sub.sub_category %>
+  <% end %>
