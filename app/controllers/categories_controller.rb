@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @items = @category.items
   end
 
   def create
