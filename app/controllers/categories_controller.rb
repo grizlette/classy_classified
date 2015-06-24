@@ -15,19 +15,18 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path
+      redirect_to categories_path(@category.id)
     else
       render :edit
     end
   end
 
   def show
-    @categories = Category.where(category: @category.category)
   end
 
   def create
-    @category.new(category_params)
-      if @category.save
+    @category = Category.new(category_params)
+    if @category.save
         redirect_to categories_path
     else
       render :new
@@ -46,7 +45,7 @@ class CategoriesController < ApplicationController
   private
 
     def category_params
-      params.require(:category).permit(:category, :sub_category)
+      params.require(:category).permit(:category_name, :sub_category)
     end
 
     def find_category

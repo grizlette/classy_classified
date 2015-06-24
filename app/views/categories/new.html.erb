@@ -2,7 +2,7 @@
 
 
 <%= form_for(@category) do |f| %>
-  <p>Category: <%= f.text_field(:category) %></p>
+  <p>Category: <%= f.text_field(:category_name) %></p>
   <p>Subcategory: <%= f.text_field(:sub_category) %></p>
   <p><%= f.submit('Save') %></p>
 <% end %>

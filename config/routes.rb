@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :items
   resources :categories
 
+  get ':category' => 'pages#show'
 
 end

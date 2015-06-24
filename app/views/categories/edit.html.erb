@@ -1,2 +1,11 @@
 <h1>Categories#edit</h1>
 <p>Find me in app/views/categories/edit.html.erb</p>
+
+
+<h1>EDIT</h1>
+
+<%= form_for(@category) do |f| %>
+  <p>Category: <%= f.text_field(:category) %></p>
+  <p>Subcategory: <%= f.text_field(:sub_category) %></p>
+  <p><%= f.submit('Save') %></p>
+<% end %>
