@@ -1,5 +1,4 @@
 <h1>Categories</h1>
-
 <% @categories.each do |s| %>
   <h3><%= s.category_name %></h3>
       <% @subbies = Category.where(category_name: s.category_name) %>
@@ -7,3 +6,4 @@
         <%= link_to ss.sub_category, item_path(ss.id) %><br>
       <% end %>
   <% end %>
+
