@@ -1,12 +1,30 @@
-<%= form_for @event do |f| %>
+<%= form_for @item do |f| %>
 <%= f.label('Category: ') %>
-<%= f.select(:category_id, Category.all.collect {|p| [ p.category, p.id ] }, {prompt: 'Select Category'}) %>
+<%= f.select(:category_id, Category.distinct.all.collect {|p| [ p.category, p.id ] }, {prompt: 'Select Category'}) %>
 <br>
 <%= f.label('Subategory') %>
-<%= f.select(:category_id, Category.all.collect {|p| [ p.subcategory, p.id ] }, {prompt: 'Select Subcategory'}) %>
+<%= f.select(:category_id, Category.all.collect {|p| [ p.sub_category, p.id ] }, {prompt: 'Select Subcategory'}) %>
 <br>
-<%= f.label('Date and Time') %>
-<%= f.datetime_select :event_date, start_year: Time.now.year, end_year: 2017 %>
+<%= f.label('Item Name') %>
+<%= f.text_field :item_name %>
 <br>
-<%= f.submit('Add Event') %>
+<%= f.label('Item Price') %>
+<%= f.text_field :item_price %>
+<br>
+<%= f.label('Item Description') %>
+<%= f.text_area :item_description %>
+<br>
+<%= f.label('Seller Name') %>
+<%= f.text_field :seller_name %>
+<br>
+<%= f.label('Seller Phone Number') %>
+<%= f.text_field :seller_phone_number %>
+<br>
+<%= f.label('Seller Email') %>
+<%= f.text_field :seller_email %>
+<br>
+<%= f.label('Seller location') %>
+<%= f.text_field :seller_location %>
+<br>
+<%= f.submit('List Item') %>
 <% end %>
