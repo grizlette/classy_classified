@@ -1,9 +1,9 @@
 class CategoriesController < ApplicationController
-  
+
   before_action :find_category, only: [:edit, :update, :show, :destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.select(:category_name).distinct
   end
 
   def new
@@ -42,6 +42,15 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def sub_category
+    #@subcategories = Category.where(category: params[:selectedCategory]).map do |c|
+    #  c.sub_category unless c.sub_category.nil?
+    #end
+    @subcategories = Category.where(category_name: params[:selectedCategory])
+    render(json: @subcategories)
+  end
+
+
   private
 
     def category_params
@@ -53,5 +62,3 @@ class CategoriesController < ApplicationController
     end
 
 end
-
-

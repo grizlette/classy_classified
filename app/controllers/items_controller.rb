@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    if @item.save(item_params)
+    if Item.create(item_params)
       redirect_to items_path
     else
       render :new
@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
 
   private
     def find_item
-      @item = item.find(params[:id])
+      @item = Item.find(params[:id])
     end
 
     def item_params
