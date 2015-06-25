@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
-
-  let(:item){Item.create(item_name: 'this here item', item_price: 9.99)}
+  let(:item){FactoryGirl.create(:item, item_name: 'first name')}
 
   describe "GET #index" do
     it "returns http success" do

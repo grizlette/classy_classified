@@ -48,11 +48,7 @@ class CategoriesController < ApplicationController
   end
 
   def sub_category
-    #@subcategories = Category.where(category: params[:selectedCategory]).map do |c|
-    #  c.sub_category unless c.sub_category.nil?
-    #end
-    @subcategories = Category.where(category_name: params[:selectedCategory])
-    render(json: @subcategories)
+    render(json: Category.where(category_name: params[:selectedCategory]))
   end
 
 
