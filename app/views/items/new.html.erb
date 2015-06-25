@@ -1,4 +1,4 @@
-<%= form_for @item do |f| %>
+<%= form_for @item, :html => { :multipart => true } do |f| %>
 <%= f.label('Category: ') %>
 <% @categories = Category.select(:category_name).distinct %>
 <%= f.select(:category_id, @categories.all.collect {|p| [ p.category_name, p.id ]},{prompt: 'Select Category'}, {class: 'main_cat form-control', :style => "width:50%;"}) %>
@@ -25,6 +25,8 @@
 <br>
 
 <%= f.text_field :seller_location, class: "form-control", :placeholder => "Enter Your Location", :style => "width:50%;" %>
+<br>
+<%= f.file_field :photo %>
 <br>
 <%= f.submit('List Item', class: "form-control btn btn-success", :style => "width:25%") %>
 <% end %>
