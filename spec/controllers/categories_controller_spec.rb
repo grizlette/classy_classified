@@ -11,22 +11,22 @@ RSpec.describe CategoriesController, type: :controller do
     end
   end
 
-  describe "GET #edit" do
-    it "does edit" do
-      get :edit, id: category.id
-      expect(response).to have_http_status(:success)
-    end
-
-    it "doesn't edit" do
-      get :edit, id: 399
-      expect(flash[:error]).to be_present
-  end
-end
-
-  describe "GET #new" do
+ describe "GET #new" do
     it "returns http success" do
       get :new
       expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #edit" do
+      it "does edit" do
+        get :edit, id: category.id
+        expect(response).to have_http_status(:success)
+      end
+
+      it "doesn't edit" do
+        get :edit, id: 1
+        expect(response).to have_http_status(:not_found)
     end
   end
 
@@ -37,8 +37,8 @@ end
     end
 
     it "doesn't show" do
-      get :show, id: 399
-      expect(flash[:error]).to be_present
+      get :show, id: 1
+      expect(response).to have_http_status(:not_found)
     end
   end
 
@@ -46,7 +46,7 @@ end
     it "does create" do
       post :create, category: {category_name: 'Create Category', sub_category: 'Create Subcategory'}
       expect(response).to have_http_status(:redirect)
-      expect(Item.all.count).to eq(1)
+      expect(Category.all.count).to eq(1)
     end
 
     it "doesn't create" do
@@ -64,6 +64,18 @@ end
     it "doesn't update" do
       put :update, id: category.id, category: {category_name: nil}
       expect(flash[:error]).to be_present
+    end
+  end
+
+  describe "DELETE destroy" do
+    it "does delete the category" do
+      delete :destroy, id: category.id
+      expect(Category.all.count).to eq(0)
+    end
+
+    it "doesn't delete the category" do
+      delete :destroy, id: category.id
+      expect(response).to have_http_status(:redirect)
     end
   end
 
