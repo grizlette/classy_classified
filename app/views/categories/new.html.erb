@@ -1,8 +1,16 @@
-<h1>New Category Page</h1>
+<h1>Add A Category/Subcategory</h1>
 
 
-<%= form_for(@category) do |f| %>
-  <p>Category: <%= f.text_field(:category_name) %></p>
-  <p>Subcategory: <%= f.text_field(:sub_category) %></p>
-  <p><%= f.submit('Save') %></p>
+<%= form_for @category, :html => { :multipart => true } do |f| %>
+  <%= f.label('Category') %>
+  <br>
+  <%= f.text_field :category_name, class: "form-control", :placeholder => "ex. Appliances", :style => "width:50%;" %>
+  <br>
+  <%= f.label('Subcategory') %>
+  <br>
+  <%= f.text_field :category_name, class: "form-control", :placeholder => "ex. Dishwasher", :style => "width:50%;" %>
+  <br>
+ <%= f.submit('Save Category', class: "form-control btn btn-success", :style => "width:25%") %>
 <% end %>
+
+
