@@ -1,7 +1,6 @@
 $(document).ready(function(){
-
-
   $(document).on('change', '.main_cat', function(){
+    // <option>Toys</option>
     var $selected = $('#item_category_id :selected').text()
 
     $.ajax("/subcategories", {

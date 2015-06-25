@@ -1,7 +1,20 @@
 <h1><%= @item.item_name %></h1>
-<%= image_tag @item.photo.url(:thumb) %>
-$<%= @item.item_price %><br>
-<%= @item.item_description %><br>
+<div class="pull-left">
+
+</div>
+<div class="pull-left item-info">
+  Ad Number:<%= @item.id %><br>
+  Post Date:<%= @item.created_at.strftime('%Y%m%d%H%M%S') %><br>
+  Days Online: <%= @e  %><br>
+  Days Left:<%= 30 - @e %><br>
+  Listing Type:Private<br>
+  Page Views:<%= rand(1..500000)%><br>
+  Sellers Account:1 days old<br>
+</div>
+<h4>$<%= @item.item_price %><br></h4>
+<%= @item.item_description %><br><br>
+<hr /r>
+<h3>Seller Contact Info: </h3>
 <%= @item.seller_name %><br>
 <%= @item.seller_email %><br>
 <%= @item.seller_phone_number %><br>
