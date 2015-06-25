@@ -50,6 +50,10 @@
       Copyright &copy <%= Time.now.year %>
     </footer>
   </div>
+<%= render(partial: 'shared/top_nav') %>
+
+<div class="container">
+  <%= yield %>
 </div>
 
 </body>
