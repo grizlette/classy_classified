@@ -1,7 +1,11 @@
 <h1><%= @item.item_name %></h1>
 <div class="row">
       <div class="col-md-3">
-        <%= image_tag @item.photo.url(:thumb) %>
+
+        <div class="fancybox">
+
+        <%= link_to image_tag(@item.photo.url(:thumb)), @item.photo.url(:large), :class => "fancybox" %>
+      </div>
       </div>
       <div class="col-md-3">
         <h4>$<%= @item.item_price %><br></h4>

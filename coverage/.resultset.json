@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/grizlette/dev/rails/classy_classified/spec/controllers/categories_controller_spec.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/spec/controllers/categories_controller_spec.rb": [
         1,
         null,
         1,
@@ -27,7 +27,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         1,
@@ -88,7 +87,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/rails_helper.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -142,14 +141,14 @@
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/environment.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/application.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/application.rb": [
         1,
         null,
         1,
@@ -177,12 +176,12 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/boot.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/environments/test.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/environments/test.rb": [
         1,
         null,
         null,
@@ -226,7 +225,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/assets.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -234,41 +233,12 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/cookies_serializer.rb": [
-        null,
-        null,
-        1
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -277,18 +247,47 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/session_store.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/initializers/wrap_parameters.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -304,7 +303,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/factories/categories.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/spec/factories/categories.rb": [
         1,
         1,
         1,
@@ -312,7 +311,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/factories/items.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/spec/factories/items.rb": [
         1,
         1,
         1,
@@ -321,7 +320,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/config/routes.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/config/routes.rb": [
         1,
         null,
         null,
@@ -338,19 +337,19 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/helpers/application_helper.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/helpers/categories_helper.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/helpers/categories_helper.rb": [
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/helpers/items_helper.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/helpers/items_helper.rb": [
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/controllers/categories_controller.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/controllers/categories_controller.rb": [
         1,
         null,
         1,
@@ -420,14 +419,14 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/controllers/application_controller.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/controllers/items_controller_spec.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/spec/controllers/items_controller_spec.rb": [
         1,
         null,
         1,
@@ -517,7 +516,7 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/app/controllers/items_controller.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/controllers/items_controller.rb": [
         1,
         null,
         1,
@@ -588,119 +587,15 @@
         null,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/helpers/categories_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/helpers/items_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/models/category_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/app/models/category.rb": [
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/models/category.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/models/item_spec.rb": [
-        1,
-        null,
+      "/Users/bradleyhintze/Desktop/dev/RailsModels/classy_classifieds/app/models/item.rb": [
         1,
         1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/app/models/item.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/categories/edit.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/categories/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/categories/new.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/categories/show.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/items/edit.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/items/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/items/new.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/grizlette/dev/rails/classy_classified/spec/views/items/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -708,6 +603,6 @@
         null
       ]
     },
-    "timestamp": 1435271100
+    "timestamp": 1435271289
   }
 }

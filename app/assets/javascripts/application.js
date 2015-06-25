@@ -15,3 +15,9 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+//= require fancybox
+
+
+$(document).ready(function() {
+  $("a.fancybox").fancybox();
+});
