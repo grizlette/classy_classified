@@ -66,6 +66,7 @@ RSpec.describe CategoriesController, type: :controller do
     it "doesn't update" do
       put :update, id: category.id, category: {category_name: nil}
       expect(flash[:error]).to be_present
+      expect(response).to render_template(:edit)
     end
   end
 
