@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
     if Item.create(item_params)
       redirect_to items_path
     else
+      flash[:error] = 'Create did not work'
       render :new
     end
   end
@@ -28,6 +29,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to items_path
     else
+      flash[:error] = 'Update errors'
       render :edit
     end
   end
@@ -45,7 +47,11 @@ class ItemsController < ApplicationController
 
   private
     def find_item
-      @item = Item.find(params[:id])
+      @item = Item.find_by(id: params[:id])
+    unless @item
+      flash[:error] = "Person was not found!"
+      render(text: "Item not found with ID: #{params[:id]}", status: 404)
+    end
     end
 
     def item_params
