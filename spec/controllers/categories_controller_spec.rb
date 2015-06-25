@@ -19,14 +19,14 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   describe "GET #edit" do
-      it "does edit" do
-        get :edit, id: category.id
-        expect(response).to have_http_status(:success)
-      end
+    it "does edit" do
+      get :edit, id: category.id
+      expect(response).to have_http_status(:success)
+    end
 
-      it "doesn't edit" do
-        get :edit, id: 1
-        expect(response).to have_http_status(:not_found)
+    it "doesn't edit" do
+      get :edit, id: 1
+      expect(response).to have_http_status(:not_found)
     end
   end
 
