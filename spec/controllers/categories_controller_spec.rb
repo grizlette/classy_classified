@@ -21,7 +21,6 @@ RSpec.describe CategoriesController, type: :controller do
 
   describe "GET #edit" do
     it "does edit" do
-      binding.pry
       get :edit, id: category.id
       expect(response).to have_http_status(:success)
     end
