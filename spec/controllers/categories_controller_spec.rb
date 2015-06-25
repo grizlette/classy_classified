@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
 
-  let(:category){Category.create!(category_name: 'New Category', sub_category: 'New sub_category')}
+  let(:category){create(:category)}
+  let(:item){Item.create(item_name: 'this here item', item_price: 9.99)}
 
   describe "GET #index" do
     it "returns http success" do
@@ -13,6 +14,7 @@ RSpec.describe CategoriesController, type: :controller do
 
   describe "GET #edit" do
     it "does edit" do
+      binding.pry
       get :edit, id: category.id
       expect(response).to have_http_status(:success)
     end
