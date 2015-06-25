@@ -18,7 +18,7 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it "doesn't edit" do
-      get :edit, id: nil
+      get :edit, id: 399
       expect(flash[:error]).to be_present
   end
 end
@@ -37,7 +37,7 @@ end
     end
 
     it "doesn't show" do
-      get :show, id: 5000
+      get :show, id: 399
       expect(flash[:error]).to be_present
     end
   end
