@@ -37,7 +37,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 group :test do
   gem 'simplecov', :require => false
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails", "~> 4.0"
   gem 'webmock'
 
 end

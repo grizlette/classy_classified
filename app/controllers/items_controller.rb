@@ -7,6 +7,14 @@ class ItemsController < ApplicationController
   end
 
   def show
+    d = Time.now
+    a = @item.created_at
+    b = d.strftime("%j")
+    c = a.strftime("%j")
+    f = b.scan(/\d+/).join().to_i
+    g = c.scan(/\d+/).join().to_i
+    @e = g - f
+
   end
 
   def new
