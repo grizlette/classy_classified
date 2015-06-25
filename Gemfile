@@ -36,6 +36,9 @@ gem 'bootstrap-sass', '~> 3.3.5'
 # gem 'capistrano-rails', group: :development
 group :test do
   gem 'simplecov', :require => false
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'webmock'
 end
 
 group :development, :test do

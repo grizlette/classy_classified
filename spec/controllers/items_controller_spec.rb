@@ -64,6 +64,7 @@ RSpec.describe ItemsController, type: :controller do
     it "no update" do
       put :update, id: item.id, item: {item_name: nil}
       expect(flash[:error]).to be_present
+      expect(response).to render_template(:edit)
     end
   end
 
@@ -77,6 +78,12 @@ RSpec.describe ItemsController, type: :controller do
       delete :destroy, id: 499
       expect(flash[:error]).to be_present
     end
+  end
+
+
+
+  describe "ItemsController" do
+    it { should use_before_action(:find_item) }
   end
 
 end
