@@ -15,9 +15,6 @@
 <%=f.text_area(:item_description, class: "form-control", :placeholder => "Enter Description", :size => "1x5", :style => "width:50%;") %>
 <br>
 
-<%= f.text_field :seller_name, class: "form-control", :placeholder => "Enter Your Name", :style => "width:50%;" %>
-<br>
-
 <%= f.text_field :seller_phone_number, class: "form-control", :placeholder => "Enter Your Phone Number", :style => "width:50%;" %>
 <br>
 
@@ -28,5 +25,6 @@
 <br>
 <%= f.file_field :photo %>
 <br>
+<%= f.hidden_field :user_id, :value => current_user.id  %>
 <%= f.submit('List Item', class: "form-control btn btn-success", :style => "width:25%") %>
 <% end %>
