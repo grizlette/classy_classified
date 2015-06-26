@@ -19,15 +19,20 @@
           Days Left: <%= 30 - @e %><br>
           Listing Type: Private<br>
           Page Views: <%= rand(1..500000)%><br>
-          Sellers Account:1 days old<br>
+          Sellers Account: <%= @x %> days old<br>
         </div>
         <div class="col-md-offset-1 col-md-3">
           <h3>Seller Contact Info: </h3>
-          <%= @item.seller_name %><br>
-          <%= @item.seller_email %><br>
+          <%= @item.user.first_name %>
+          <%= @item.user.last_name %>
+          <%= @item.user.email %><br>
           <%= @item.seller_phone_number %><br>
           <%= @item.seller_location %><br>
           <hr /r>
+          <% if current_user.id == @item.user.id %>
+            <%= link_to "Edit Post", edit_item_path(@item.id), class: "btn btn-warning" %>
+            <%= link_to "Delete Post", item_path, method: :delete, class: "btn btn-danger" %>
+          <% end %>
         </div>
 
     </div>
