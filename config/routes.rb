@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   resources :items
   resources :categories
 
+
   get '/subcategories' => 'categories#sub_category'
+  get ':username' => 'pages#showmine'
   get ':category' => 'pages#show'
+
 
 
 end

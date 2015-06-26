@@ -1,0 +1,16 @@
+<% u = @user.items.all %>
+
+<h1 class = "page-header"><%=@user.username %>'s Items</h1>
+<div class="form-group">
+      <% u.each do |item| %>
+        <div class="col-sm-4">
+          <div class="text-center">
+            <%= item.item_name %><br>
+            <%= image_tag item.photo.url(:thumb) %><br><br>
+            <%= link_to "Edit Post", edit_item_path(item.id), class: "btn btn-warning" %>
+            <%= link_to "Delete Post", item_path(item.id), method: :delete, class: "btn btn-danger" %>
+          </div>
+
+        </div>
+      <% end %>
+</div>
