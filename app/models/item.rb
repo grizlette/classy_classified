@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
   belongs_to :category
+  belongs_to :user
   validates_presence_of :item_name
 
   has_attached_file :photo, :styles => { :large => "600x600>", :medium => "300x300>", :thumb => "150x150>", :exsm => "70x70" }, :default_url => "/images/:style/missing.png"
