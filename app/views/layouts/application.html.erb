@@ -9,22 +9,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div class="container">
-  <div class="row">
-    <%= render(partial: 'shared/top_nav') %>
-</div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="container">
+    <div class="row">
+      <%= render(partial: 'shared/top_nav') %>
+    </div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>  
   <div class="row">
     <%= yield %>
   </div>
-  <div class="row">
-    <footer>
-      <hr />
-      Copyright &copy <%= Time.now.year %>
-    </footer>
+    <div class="row">
+      <footer>
+        <hr />
+          Copyright &copy <%= Time.now.year %>
+      </footer>
+    </div>
   </div>
-
 </body>
 </html>
