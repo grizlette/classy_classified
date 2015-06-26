@@ -5,7 +5,7 @@
         <div class="col-md-3">
           <%= link_to image_tag(@item.photo.url(:thumb)), @item.photo.url(:large), :class => "fancybox" %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 item-descrip">
           <h4>$<%= @item.item_price %><br></h4>
           <%= @item.item_description %><br><br>
           <hr /r>
@@ -29,10 +29,12 @@
           <%= @item.seller_phone_number %><br>
           <%= @item.seller_location %><br>
           <hr /r>
-          <% if current_user.id == @item.user.id %>
-            <%= link_to "Edit Post", edit_item_path(@item.id), class: "btn btn-warning" %>
-            <%= link_to "Delete Post", item_path, method: :delete, class: "btn btn-danger" %>
-          <% end %>
+          <div class="show-buttons">
+            <% if current_user.id == @item.user.id %>
+              <%= link_to "Edit Post", edit_item_path(@item.id), class: "btn btn-warning" %>
+              <%= link_to "Delete Post", item_path, method: :delete, class: "btn btn-danger" %>
+            <% end %>
+          </div>
         </div>
 
     </div>
