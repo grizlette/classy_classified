@@ -1,35 +1,34 @@
-<h1><%= @item.item_name %></h1>
-<div class="row">
-      <div class="col-md-3">
 
-        <div class="fancybox">
-
-        <%= link_to image_tag(@item.photo.url(:thumb)), @item.photo.url(:large), :class => "fancybox" %>
-      </div>
-      </div>
-      <div class="col-md-3">
-        <h4>$<%= @item.item_price %><br></h4>
-        <%= @item.item_description %><br><br>
-        <hr /r>
-      </div>
-  </div>
+<div id="show_page">
+  <h1><%= @item.item_name %></h1>
   <div class="row">
-      <div class="col-md-2 item-info">
-        Ad Number: <%= @item.id %><br>
-        Post Date: <%= @item.created_at.strftime('%b %d, %Y') %><br>
-        Days Online: <%= @e  %><br>
-        Days Left: <%= 30 - @e %><br>
-        Listing Type: Private<br>
-        Page Views: <%= rand(1..500000)%><br>
-        Sellers Account:1 days old<br>
-      </div>
-      <div class="col-md-offset-1 col-md-3">
-        <h3>Seller Contact Info: </h3>
-        <%= @item.seller_name %><br>
-        <%= @item.seller_email %><br>
-        <%= @item.seller_phone_number %><br>
-        <%= @item.seller_location %><br>
-        <hr /r>
-      </div>
+        <div class="col-md-3">
+          <%= link_to image_tag(@item.photo.url(:thumb)), @item.photo.url(:large), :class => "fancybox" %>
+        </div>
+        <div class="col-md-3">
+          <h4>$<%= @item.item_price %><br></h4>
+          <%= @item.item_description %><br><br>
+          <hr /r>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 item-info">
+          Ad Number: <%= @item.id %><br>
+          Post Date: <%= @item.created_at.strftime('%b %d, %Y') %><br>
+          Days Online: <%= @e  %><br>
+          Days Left: <%= 30 - @e %><br>
+          Listing Type: Private<br>
+          Page Views: <%= rand(1..500000)%><br>
+          Sellers Account:1 days old<br>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+          <h3>Seller Contact Info: </h3>
+          <%= @item.seller_name %><br>
+          <%= @item.seller_email %><br>
+          <%= @item.seller_phone_number %><br>
+          <%= @item.seller_location %><br>
+          <hr /r>
+        </div>
 
+    </div>
   </div>
