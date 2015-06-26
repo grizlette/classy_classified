@@ -7,13 +7,17 @@ class ItemsController < ApplicationController
   end
 
   def show
-    d = Time.now
-    a = @item.created_at
-    b = d.strftime("%j")
-    c = a.strftime("%j")
-    f = b.scan(/\d+/).join().to_i
-    g = c.scan(/\d+/).join().to_i
-    @e = g - f
+    current_time = Time.now
+    item_created_at = @item.created_at
+    user_created_at = @item.user.created_at
+    user_created_at_day_of_year = user_created_at.strftime("%j")
+    current_day_of_year = current_time.strftime("%j")
+    item_created_at_day_of_year = item_created_at.strftime("%j")
+    a = user_created_at_day_of_year.scan(/\d+/).join().to_i
+    b = item_created_at_day_of_year.scan(/\d+/).join().to_i
+    c = current_day_of_year.scan(/\d+/).join().to_i
+    @e = c - b
+    @x = c - a
 
   end
 
@@ -63,7 +67,7 @@ class ItemsController < ApplicationController
     end
 
     def item_params
-      params.require(:item).permit(:item_name, :item_price, :item_description, :seller_name, :seller_phone_number, :seller_email, :seller_location, :category_id, :photo)
+      params.require(:item).permit(:item_name, :item_price, :item_description, :seller_phone_number, :seller_location, :category_id, :photo, :user_id)
     end
 
 end

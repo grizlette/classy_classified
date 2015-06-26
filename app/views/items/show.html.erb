@@ -19,11 +19,12 @@
           Days Left: <%= 30 - @e %><br>
           Listing Type: Private<br>
           Page Views: <%= rand(1..500000)%><br>
-          Sellers Account:1 days old<br>
+          Sellers Account: <%= @x %> days old<br>
         </div>
         <div class="col-md-offset-1 col-md-3">
           <h3>Seller Contact Info: </h3>
-          <%= @item.seller_name %><br>
+          <%= @item.user.first_name %>
+          <%= @item.user.last_name %>
           <%= @item.seller_email %><br>
           <%= @item.seller_phone_number %><br>
           <%= @item.seller_location %><br>
