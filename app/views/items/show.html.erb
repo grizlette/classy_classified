@@ -25,10 +25,14 @@
           <h3>Seller Contact Info: </h3>
           <%= @item.user.first_name %>
           <%= @item.user.last_name %>
-          <%= @item.seller_email %><br>
+          <%= @item.user.email %><br>
           <%= @item.seller_phone_number %><br>
           <%= @item.seller_location %><br>
           <hr /r>
+          <% if current_user.id == @item.user.id %>
+            <%= link_to "Edit Post", edit_item_path(@item.id), class: "btn btn-warning" %>
+            <%= link_to "Delete Post", item_path, method: :delete, class: "btn btn-danger" %>
+          <% end %>
         </div>
 
     </div>
