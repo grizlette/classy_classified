@@ -2,11 +2,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-footer{
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
+
 
 .item-info {
   background-color: gray;
+  margin-left: 15px;
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 5px;
+}
+
+body {
+  background-color: blue;
+}
+
+.container{
+  background: white;
+
+}
+
+#show_page {
+  box-shadow: 5px 5px 5px #000000;
+  border-radius: 5px;
+}
+
+footer{
+  margin-top: 30px;
+  margin-bottom: 20px;
+
 }
