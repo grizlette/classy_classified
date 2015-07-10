@@ -63,6 +63,6 @@ class CategoriesController < ApplicationController
       unless @category 
         render text: "Couldn't find id with category #{params[:id]}", status: :not_found
       end
-    endr
+    end
 
 end
