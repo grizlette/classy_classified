@@ -28,7 +28,7 @@
           <%= @item.user.email %><br>
           <%= @item.seller_phone_number %><br>
           <%= @item.seller_location %><br>
-          <hr /r>
+          <hr />
           <div class="show-buttons">
             <% if current_user.id == @item.user.id %>
               <%= link_to "Edit Post", edit_item_path(@item.id), class: "btn btn-warning" %>

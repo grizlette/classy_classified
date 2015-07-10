@@ -10,14 +10,14 @@ RSpec.describe CategoriesController, type: :controller do
       get :index
       expect(response).to have_http_status(:success)
     end
-  end
+  end # end #index
 
  describe "GET #new" do
     it "returns http success" do
       get :new
       expect(response).to have_http_status(:success)
     end
-  end
+  end # end NEW
 
   describe "GET #edit" do
     it "does edit" do
@@ -29,7 +29,7 @@ RSpec.describe CategoriesController, type: :controller do
       get :edit, id: 1
       expect(response).to have_http_status(:not_found)
     end
-  end
+  end # end EDIT
 
   describe "GET #show" do
     it "does show" do
@@ -41,7 +41,7 @@ RSpec.describe CategoriesController, type: :controller do
       get :show, id: 1
       expect(response).to have_http_status(:not_found)
     end
-  end
+  end # end SHOW
 
   describe "POST #create" do
     it "does create" do
@@ -54,7 +54,7 @@ RSpec.describe CategoriesController, type: :controller do
       post :create, category: {category_name: nil, sub_category: 'Create Subcategory'}
       expect(Category.all.count).to eq(0)
     end
-  end
+  end # end CREATE
 
   describe "PUT update" do
     it "does update" do
@@ -67,7 +67,7 @@ RSpec.describe CategoriesController, type: :controller do
       expect(flash[:error]).to be_present
       expect(response).to render_template(:edit)
     end
-  end
+  end # end UPDATE
 
   describe "DELETE destroy" do
     it "does delete the category" do
@@ -79,6 +79,6 @@ RSpec.describe CategoriesController, type: :controller do
       delete :destroy, id: category.id
       expect(response).to have_http_status(:redirect)
     end
-  end
+  end # end DESTROY
 
 end
