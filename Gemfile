@@ -33,6 +33,11 @@ gem 'fancybox-rails'
 
 gem 'devise'
 
+group :production do
+  gem 'rails_12factor'
+  gem 'puma'
+end
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 group :development do
